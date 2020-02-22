@@ -1,6 +1,4 @@
-package array;
-
-import java.util.Objects;
+package queue;
 
 public class Array<E> {
     private E[] data;

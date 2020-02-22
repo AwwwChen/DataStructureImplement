@@ -1,6 +1,4 @@
-package array;
-
-import java.util.Objects;
+package stack;
 
 public class Array<E> {
     private E[] data;
@@ -221,5 +219,4 @@ public class Array<E> {
         }
         data = tempArray;
     }
-
 }
