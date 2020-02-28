@@ -1,4 +1,4 @@
-package linkedList;
+package map;
 
 public class LinkedList<E> {
     private Node dummyHead;

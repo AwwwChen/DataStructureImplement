@@ -7,8 +7,6 @@ public class BSTSet<E extends Comparable<E>> implements Set<E> {
         bst = new BST<E>();
     }
 
-
-
     @Override
     public void add(E e) {
         // BST里实现的就是不带重复元素的二分搜索树
@@ -33,6 +31,10 @@ public class BSTSet<E extends Comparable<E>> implements Set<E> {
     @Override
     public boolean isEmpty() {
         return bst.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        // 测试BST实现的Set
     }
 
 }

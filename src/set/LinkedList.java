@@ -1,4 +1,4 @@
-package linkedList;
+package set;
 
 public class LinkedList<E> {
     private Node dummyHead;
@@ -132,7 +132,6 @@ public class LinkedList<E> {
             delNode.next = null;
         }
     }
-
     @Override
     public String toString() {
         Node cur = dummyHead.next;
