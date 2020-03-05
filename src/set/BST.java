@@ -13,7 +13,6 @@ public class BST<E extends Comparable<E>> {
     }
 
     public int getSize() {
-        Object a = new Object();
         return size;
     }
 
@@ -146,7 +145,7 @@ public class BST<E extends Comparable<E>> {
     }
 
     /**
-     * 寻找
+     * 寻找最小元素
      * @return
      */
     public E minimum() {
