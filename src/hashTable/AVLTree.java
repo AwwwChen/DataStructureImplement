@@ -337,8 +337,7 @@ public class AVLTree<K extends Comparable<K>, V>{
         if (retNode == null) return null;
         retNode.height = 1 + Math.max(getHeight(retNode.left), getHeight(retNode.right));
         int balanceFactor = getBalanceFactor(retNode);
-//        if (Math.abs(balanceFactor) > 1)
-//            System.out.println("unbalanced : " + balanceFactor);
+
         // 平衡维护情况一（右旋转）：
         // 左子树高度 - 右子树高度 > 1 && 整体向左侧偏斜
         if (balanceFactor > 1 && getBalanceFactor(retNode.left) >= 0)
