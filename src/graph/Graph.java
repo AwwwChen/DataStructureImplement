@@ -47,7 +47,7 @@ public class Graph {
         }
     }
 
-    private void validateVertex(int... v) {
+    public void validateVertex(int... v) {
         for (int t : v)
             if (t < 0 || t >= V) throw new IllegalArgumentException("vertex " + t + " is invalid.");
     }

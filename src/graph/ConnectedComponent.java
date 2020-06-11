@@ -29,6 +29,24 @@ public class ConnectedComponent {
         return ccCount;
     }
 
+    // 判断两个顶点是否在一个联通分量中
+    public boolean isConnected(int v, int w) {
+        // 确认顶点合法性
+        G.validateVertex(v, w);
+        return visited[v] == visited[w];
+    }
+
+    public ArrayList<Integer>[] components() {
+        ArrayList<Integer>[] res = new ArrayList[ccCount];
+        for (int i = 0; i < ccCount; i ++) {
+            res[i] = new ArrayList<>();
+        }
+        for (int v = 0; v < G.V(); v ++) {
+            res[visited[v]].add(v);
+        }
+        return res;
+    }
+
     private void dfs(int v, int ccid) {
         visited[v] = ccid;
         for (int w : G.adj(v)) {
@@ -42,5 +60,8 @@ public class ConnectedComponent {
         Graph g = new Graph("data/g.txt");
         ConnectedComponent connectedComponent = new ConnectedComponent(g);
         System.out.println(connectedComponent.ccCount());
+        System.out.println(connectedComponent.isConnected(0, 6));
+        ArrayList<Integer>[] components = connectedComponent.components();
+        System.out.println(Arrays.toString(components));
     }
 }
