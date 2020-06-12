@@ -2,6 +2,9 @@ package graph;
 
 import java.util.ArrayList;
 
+/**
+ * 图的深度优先遍历
+ */
 public class GraphDFS {
     private Graph G;
     private boolean[] visited;
