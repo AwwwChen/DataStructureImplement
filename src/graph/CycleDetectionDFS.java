@@ -5,12 +5,12 @@ package graph;
  * @Description: 无向图的环检测问题
  * @Date 2020-06-11
  */
-public class CycleDetection {
+public class CycleDetectionDFS {
     private Graph G;
     private boolean hasCycle = false;
     private boolean[] visited;
 
-    public CycleDetection(Graph G) {
+    public CycleDetectionDFS(Graph G) {
         this.G = G;
         this.visited = new boolean[G.V()];
 
@@ -44,11 +44,11 @@ public class CycleDetection {
 
     public static void main(String[] args) {
         Graph g = new Graph("data/g.txt");
-        CycleDetection cycleDetection = new CycleDetection(g);
+        CycleDetectionDFS cycleDetection = new CycleDetectionDFS(g);
         System.out.println(cycleDetection.hasCycle());
 
         Graph g2 = new Graph("data/g2.txt");
-        CycleDetection cycleDetection2 = new CycleDetection(g2);
+        CycleDetectionDFS cycleDetection2 = new CycleDetectionDFS(g2);
         System.out.println(cycleDetection2.hasCycle());
     }
 }

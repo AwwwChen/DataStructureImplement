@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 // 求图的联通分量
-public class ConnectedComponent {
+public class ConnectedComponentDFS {
     private Graph G;
     private int ccCount;
     private int[] visited;
 
-    public ConnectedComponent(Graph G) {
+    public ConnectedComponentDFS(Graph G) {
         this.G = G;
         this.ccCount = 0;
         this.visited = new int[G.V()];
@@ -58,7 +58,7 @@ public class ConnectedComponent {
 
     public static void main(String[] args) {
         Graph g = new Graph("data/g.txt");
-        ConnectedComponent connectedComponent = new ConnectedComponent(g);
+        ConnectedComponentDFS connectedComponent = new ConnectedComponentDFS(g);
         System.out.println(connectedComponent.ccCount());
         System.out.println(connectedComponent.isConnected(0, 6));
         ArrayList<Integer>[] components = connectedComponent.components();

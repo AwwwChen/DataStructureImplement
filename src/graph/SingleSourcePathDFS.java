@@ -7,17 +7,17 @@ import java.util.List;
 
 /**
  * @Author: zc
- * @Description: 单源路径问题
+ * @Description: 单源路径问题（基于广度深度先遍历）
  * @Date 2020-06-11
  */
-public class SingleSourcePath {
+public class SingleSourcePathDFS {
     private Graph G;
     private int s;
     private boolean[] visited;
     // 存储路径中每个节点上一个节点
     private int[] pre;
 
-    public SingleSourcePath(Graph G, int s) {
+    public SingleSourcePathDFS(Graph G, int s) {
         G.validateVertex(s);
         this.G = G;
         this.s = s;
@@ -67,7 +67,7 @@ public class SingleSourcePath {
 
     public static void main(String[] args) {
         Graph g = new Graph("data/g.txt");
-        SingleSourcePath ssPath = new SingleSourcePath(g, 0);
+        SingleSourcePathDFS ssPath = new SingleSourcePathDFS(g, 0);
         System.out.println("0 -> 6 : " + ssPath.path(6));
         System.out.println("0 -> 5 : " + ssPath.path(6));
     }

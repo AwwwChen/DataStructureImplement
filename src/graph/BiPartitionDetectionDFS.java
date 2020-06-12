@@ -3,7 +3,7 @@ package graph;
 import java.util.Arrays;
 
 // 二分图检测问题（检测当前图是否是二分图）
-public class BiPartitionDetection {
+public class BiPartitionDetectionDFS {
     private Graph G;
     private int[] colors;
     private boolean[] visited;
@@ -11,7 +11,7 @@ public class BiPartitionDetection {
     private static final int BLUE = 0;
     private static final int GREEN = 1;
 
-    public BiPartitionDetection(Graph G) {
+    public BiPartitionDetectionDFS(Graph G) {
         this.G = G;
         this.visited = new boolean[G.V()];
         this.colors = new int[G.V()];
@@ -47,7 +47,7 @@ public class BiPartitionDetection {
 
     public static void main(String[] args) {
         Graph g = new Graph("data/g.txt");
-        BiPartitionDetection biPartitionDetection = new BiPartitionDetection(g);
+        BiPartitionDetectionDFS biPartitionDetection = new BiPartitionDetectionDFS(g);
         System.out.println(biPartitionDetection.isBipartite());
     }
 }
