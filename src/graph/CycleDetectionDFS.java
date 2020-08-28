@@ -1,10 +1,6 @@
 package graph;
 
-/**
- * @Author: zc
- * @Description: 无向图的环检测问题
- * @Date 2020-06-11
- */
+// 无向图的环检测问题
 public class CycleDetectionDFS {
     private Graph G;
     private boolean hasCycle = false;

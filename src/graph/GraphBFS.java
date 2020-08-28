@@ -20,6 +20,7 @@ public class GraphBFS {
         this.G = G;
         this.visited = new boolean[G.V()];
         Arrays.fill(visited, false);
+        // 可能存在多个连通分量
         for (int v = 0; v < G.V(); v ++) {
             if (!visited[v]) {
                 bfs(v);

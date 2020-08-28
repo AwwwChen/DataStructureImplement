@@ -10,7 +10,7 @@ import java.util.List;
  * @Description: 单源s到给定顶点t的路径问题
  * @Date 2020-06-11
  */
-public class Path {
+public class PathDFS {
     private Graph G;
     private int s;
     private int t;
@@ -18,7 +18,7 @@ public class Path {
     // 存储路径中每个节点上一个节点
     private int[] pre;
 
-    public Path(Graph G, int s, int t) {
+    public PathDFS(Graph G, int s, int t) {
         G.validateVertex(s, t);
         this.G = G;
         this.s = s;
@@ -75,7 +75,7 @@ public class Path {
 
     public static void main(String[] args) {
         Graph g = new Graph("data/g.txt");
-        Path path = new Path(g, 0, 6);
+        PathDFS path = new PathDFS(g, 0, 6);
         System.out.println(path.path());
     }
 }
